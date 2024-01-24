@@ -6,14 +6,16 @@ import user from "../assets/ic-user-group.png";
 import avatar from "../assets/avatar.png";
 import search from "../assets/ic-eva_search-fill.png";
 
-const Header = () => {
+const HeaderDesktop = () => {
   return (
     <header className="p-[21px] flex justify-between items-center">
-      <img src={logo} className="w-[130px] h-[40px]" />
-      <div>
+      <div className="w-[326px]">
+        <img src={logo} className="w-[130px] h-[40px]" />
+      </div>
+      <div className="w-full">
         <img src={search} />
       </div>
-      <nav className="flex gap-[5px] items-center">
+      <nav className="flex gap-[5px] items-center w-[232px]">
         <img src={geo} className="size-[24px]" />
         <img src={bell} className="size-[24px]" />
         <img src={settings} className="size-[24px]" />
@@ -24,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderDesktop;
