@@ -10,7 +10,9 @@ const HeaderDesktop = () => {
   return (
     <header className="py-[21px] px-[32px] h-[81] flex justify-between items-center">
       <div className="w-[326px]">
-        <img src={logo} className="w-[130px] h-[40px]" />
+        <a href="/">
+          <img src={logo} className="w-[130px] h-[40px]" />
+        </a>
       </div>
       <div className="w-full">
         <img src={search} />
