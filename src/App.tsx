@@ -8,8 +8,6 @@ import useDeviceDetection from "./utils";
 function App() {
   const device = useDeviceDetection();
 
-  console.log(device);
-
   return (
     <>
       {device === "Mobile" ? <HeaderMobile /> : <HeaderDesktop />}

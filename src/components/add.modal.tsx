@@ -1,0 +1,67 @@
+import { useClickAway } from "@uidotdev/usehooks";
+import ModalInputContainer from "./modal.input.container";
+
+type PropsType = {
+  setModalOpen: (arg: boolean) => void;
+};
+
+const AddModal = ({ setModalOpen }: PropsType) => {
+  const refModal: any = useClickAway(() => {
+    setModalOpen(false);
+  });
+
+  return (
+    <div className="bg-[#444444]/50 fixed top-0 left-0 w-full min-h-dvh flex justify-center items-center">
+      <dialog
+        ref={refModal}
+        className="p-[24px] bg-white flex flex-col gap-[24px] w-[712px] h-[804] rounded-[16px] shadow-[0_12px_24px_-4px] shadow-[#919EAB1F]"
+      >
+        <h1 className="text-[18px] mb-[12px]">ღონისძიების დამატება</h1>
+        <ModalInputContainer title="აღწერა">
+          <input
+            type="text"
+            placeholder="ჩაწერეთ ტექსტი"
+            className="text-[#919EAB] border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full focus:outline-none"
+          />
+        </ModalInputContainer>
+
+        <ModalInputContainer title="დაწყების დრო">
+          <div className="flex justify-between">
+            <input
+              type="date"
+              placeholder="დაწყება"
+              className="w-[324px] h-[54px] border-[1px] border-[#919EAB33] rounded-[8px] py-[16px] px-[14px] text-[#919EAB] focus:outline-none"
+            />
+            <input
+              type="date"
+              placeholder="დასრულება"
+              className="w-[324px] h-[54px] border-[1px] border-[#919EAB33] rounded-[8px] py-[16px] px-[14px] text-[#919EAB] focus:outline-none"
+            />
+          </div>
+        </ModalInputContainer>
+
+        <ModalInputContainer title="დამატებითი დეტალები">
+          <textarea
+            placeholder="აღწერეთ დამატებითი დეტალები თუ რა უნდა გაითვალისწინოს მშობელმა..."
+            className="border-[1px] border-[#919EAB33] rounded-[8px] py-[16px] px-[14px] text-[#919EAB] focus:outline-none resize-none"
+          />
+        </ModalInputContainer>
+
+        <ModalInputContainer title={"ჯგუფები"} label={false}>
+          <div>
+            <label className="flex relative select-none">
+              <span className="size-[20px] bg-[#FFCC5C]" />
+              <input
+                type="checkbox"
+                className="absolute opacity-0 cursor-pointer h-0 w-0"
+              />
+              <div className="select-none">0-დან 2 წლამდე (ჯგუფი1)</div>
+            </label>
+          </div>
+        </ModalInputContainer>
+      </dialog>
+    </div>
+  );
+};
+
+export default AddModal;
