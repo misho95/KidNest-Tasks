@@ -49,8 +49,13 @@ const AddModal = ({ setModalOpen }: PropsType) => {
         </ModalInputContainer>
 
         <ModalInputContainer title={"ჯგუფები"} label={false}>
-          <div>
-            <CustomCheckbox />
+          <div className="w-full">
+            <label className="flex gap-[5px] justify-center items-center w-fit">
+              <CustomCheckbox />
+              <div className="text-[14px] text-[#212B36] select-none">
+                0-დან 2 წლამდე (ჯგუფი1)
+              </div>
+            </label>
           </div>
         </ModalInputContainer>
       </dialog>

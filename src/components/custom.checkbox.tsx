@@ -1,5 +1,5 @@
 import { useState } from "react";
-import vector from "../assets/Vector.png";
+import checkbox from "../assets/ic-checkbox-on.png";
 
 const CustomCheckbox = () => {
   const [checked, setChecked] = useState(false);
@@ -14,12 +14,11 @@ const CustomCheckbox = () => {
       />
       <div
         className={`size-[20px] rounded-[8px] flex justify-center items-center ${
-          checked ? "bg-[#FFCC5C]" : "bg-white border-[1px]"
+          checked ? "border-0" : "bg-white border-[1px]"
         }`}
       >
-        {checked && <img src={vector} className="size-[16px]" />}
+        {checked && <img src={checkbox} className="size-[20px]" />}
       </div>
-      <div>checkbox</div>
     </label>
   );
 };
