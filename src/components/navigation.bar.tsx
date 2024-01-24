@@ -4,7 +4,7 @@ import icon3 from "../assets/icon3.png";
 
 const NavigationBar = () => {
   return (
-    <nav className="w-[248px] text-[#999999] flex flex-col justify-between">
+    <nav className="w-[248px] text-[#999999] hidden sm:flex flex-col justify-between">
       <div>
         <h4 className="h-[42px] text-[12px] flex items-center select-none">
           Overview

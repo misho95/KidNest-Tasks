@@ -6,7 +6,7 @@ type PropsType = {
 
 const Container = ({ children }: PropsType) => {
   return (
-    <div className="flex sm:min-h-[calc(100dvh-81px)] px-[32px] py-[22px]">
+    <div className="flex sm:min-h-[calc(100dvh-81px)] px-[20px] sm:px-[32px] py-[22px]">
       {children}
     </div>
   );

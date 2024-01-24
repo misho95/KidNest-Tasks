@@ -1,6 +1,7 @@
 import addIcon from "../assets/add.png";
 import coverImage from "../assets/cover_img.png";
 import avatar2 from "../assets/Avatar2.png";
+import backIcon from "../assets/back.png";
 import EventComponentDesktop from "./event.component.desktop";
 import useDeviceDetection from "../utils";
 import EventComponentMobile from "./event.component.mobile";
@@ -56,11 +57,23 @@ const MainContent = () => {
   const device = useDeviceDetection();
 
   return (
-    <main className="w-full">
-      <div className="flex flex-col justify-between items-start h-[72px] mb-[52px]">
+    <main className="w-full flex flex-col gap-[40px]">
+      <div className="flex flex-col gap-[15px] justify-between items-start">
         <h2 className="text-[24px]">ღონისძიებები</h2>
-        <div>
-          <button className="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px] self-end">
+        <div
+          className={`flex ${
+            device === "Mobile" ? "justify-between" : "justify-end"
+          } items-center w-full`}
+        >
+          <button
+            className={`text-[#919EAB] flex items-center justify-center ${
+              device === "Mobile" ? "flex" : "hidden"
+            }`}
+          >
+            <img src={backIcon} className="size-[24px]" />
+            უკან
+          </button>
+          <button className="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px]">
             <img src={addIcon} className="size-[20px]" />
             ღონისძიების დამატება
           </button>
@@ -68,8 +81,8 @@ const MainContent = () => {
       </div>
       <section className="flex flex-wrap gap-[25px] justify-end">
         {data.map((d) => {
-          return device !== "Mobile" ? (
-            <EventComponentDesktop
+          return device === "Mobile" ? (
+            <EventComponentMobile
               key={d.id}
               age={d.age}
               date={d.date}
@@ -78,7 +91,7 @@ const MainContent = () => {
               author={d.author}
             />
           ) : (
-            <EventComponentMobile
+            <EventComponentDesktop
               key={d.id}
               age={d.age}
               date={d.date}

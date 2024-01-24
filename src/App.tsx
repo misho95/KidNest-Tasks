@@ -8,11 +8,13 @@ import useDeviceDetection from "./utils";
 function App() {
   const device = useDeviceDetection();
 
+  console.log(device);
+
   return (
     <>
-      {device !== "Mobile" ? <HeaderDesktop /> : <HeaderMobile />}
+      {device === "Mobile" ? <HeaderMobile /> : <HeaderDesktop />}
       <Container>
-        {device !== "Mobile" ? <NavigationBar /> : null}
+        {device === "Mobile" ? null : <NavigationBar />}
         <MainContent />
       </Container>
     </>
