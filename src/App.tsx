@@ -12,7 +12,7 @@ function App() {
     <>
       {device !== "Mobile" ? <HeaderDesktop /> : <HeaderMobile />}
       <Container>
-        <NavigationBar />
+        {device !== "Mobile" ? <NavigationBar /> : null}
         <MainContent />
       </Container>
     </>
