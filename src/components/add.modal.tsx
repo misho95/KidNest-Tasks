@@ -1,5 +1,6 @@
 import { useClickAway } from "@uidotdev/usehooks";
 import ModalInputContainer from "./modal.input.container";
+import CustomCheckbox from "./custom.checkbox";
 
 type PropsType = {
   setModalOpen: (arg: boolean) => void;
@@ -49,14 +50,7 @@ const AddModal = ({ setModalOpen }: PropsType) => {
 
         <ModalInputContainer title={"ჯგუფები"} label={false}>
           <div>
-            <label className="flex relative select-none">
-              <span className="size-[20px] bg-[#FFCC5C]" />
-              <input
-                type="checkbox"
-                className="absolute opacity-0 cursor-pointer h-0 w-0"
-              />
-              <div className="select-none">0-დან 2 წლამდე (ჯგუფი1)</div>
-            </label>
+            <CustomCheckbox />
           </div>
         </ModalInputContainer>
       </dialog>
