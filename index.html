@@ -1,13 +1,245 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>KidNest</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- header -->
+    <header
+      class="py-[21px] px-[32px] h-[81] flex justify-between items-center"
+    >
+      <div class="w-[326px]">
+        <a href="/">
+          <img src="./assets/logo.png" class="w-[130px] h-[40px]" />
+        </a>
+      </div>
+      <div class="w-full">
+        <img src="./assets/ic-eva_search-fill.png" />
+      </div>
+      <nav class="flex gap-[4px] items-center justify-center w-[232px]">
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/Flag_of_Georgia 1.png" class="w-[33px] h-[22px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center relative">
+          <img src="./assets/ic-bell.png" class="size-[24px]" />
+          <div
+            class="absolute -top-[1px] -right-[1px] bg-[#FF5630] size-[20px] rounded-full text-[12px] text-white flex justify-center items-center"
+          >
+            1
+          </div>
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/ic-bell.png" class="size-[24px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/ic-user-group.png" class="size-[24px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/avatar.png" class="rounded-full size-[36px]" />
+        </button>
+      </nav>
+    </header>
+    <!-- header -->
+
+    <!-- content -->
+    <div
+      class="flex sm:min-h-[calc(100dvh-82px)] px-[20px] sm:px-[32px] py-[22px] gap-[30px]"
+    >
+      <!-- navigation-->
+      <nav
+        class="w-[248px] text-[#999999] hidden sm:flex flex-col justify-between"
+      >
+        <div>
+          <h4 class="h-[42px] text-[12px] flex items-center select-none">
+            Overview
+          </h4>
+          <div class="text-[14px]">
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon1.png" /> ანალიტიკა
+            </a>
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon2.png" /> ფინანსები
+            </a>
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon3.png" /> ფაილი
+            </a>
+          </div>
+        </div>
+        <button class="text-[#FF5630] w-[240px] h-[40px] shadow-md rounded-lg">
+          გასვლა
+        </button>
+      </nav>
+      <!-- navigation-->
+
+      <!--main-->
+
+      <main class="w-full flex flex-col gap-[40px]">
+        <div class="flex flex-col gap-[15px] justify-between items-start">
+          <h2 class="text-[24px] font-[700] text-[#212B36]">ღონისძიებები</h2>
+          <div class="w-full flex justify-between sm:justify-end">
+            <button
+              class="text-[#919EAB] flex items-center justify-center flex sm:hidden"
+            >
+              <img src="./assets/back.png" class="size-[24px]" />
+              უკან
+            </button>
+            <button
+              class="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px]"
+            >
+              <img src="./assets/add.png" class="size-[20px]" />
+              ღონისძიების დამატება
+            </button>
+          </div>
+        </div>
+        <section class="w-full flex flex-wrap gap-[25px]">
+          <!-- post -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+            </div>
+          </article>
+          <!-- post -->
+          <!-- post -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+            </div>
+          </article>
+          <!-- post -->
+          <!-- post -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+            </div>
+          </article>
+          <!-- post -->
+          <!-- post -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+            </div>
+          </article>
+          <!-- post -->
+          <!-- post-parents -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+              <div class="flex justify-end">
+                <button
+                  class="text-[13px] px-[8px] py-[4px] rounded-[8px] text-white bg-[#F8D063]"
+                >
+                  დადასტურებულია
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- post -->
+          <!-- post-parents -->
+          <article
+            class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
+          >
+            <div class="flex flex-col gap-[16px]">
+              <div class="flex justify-between text-[12px]">
+                <span
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                >
+                  1-დან 2 წლამდე
+                </span>
+                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+              </div>
+              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <p class="text-[14px] text-[#919EAB] font-[600]">
+                ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
+                ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
+              </p>
+              <div class="flex justify-end">
+                <button
+                  class="text-[13px] px-[8px] py-[4px] rounded-[8px] text-white bg-[#212B36]"
+                >
+                  დადასტურება
+                </button>
+              </div>
+            </div>
+          </article>
+          <!-- post -->
+        </section>
+      </main>
+
+      <!--main-->
+    </div>
+    <!-- content -->
   </body>
 </html>
