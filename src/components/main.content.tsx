@@ -3,36 +3,45 @@ import backIcon from "../assets/back.png";
 import EventComponent from "./event.component";
 import useDeviceDetection from "../utils";
 import { useState } from "react";
-import AddModal from "./add.modal";
+import AddModal from "./modal";
+import EventComponentParentSide from "./event.component.parent-side";
 
 const data = [
   {
     id: 1,
     age: "1-დან 2 წლამდე",
     date: "25 დეკ. 2023 13:00 PM",
+    title: "ღონისძიების დასახელება",
     message:
       "ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ ბავშვებს ჩააცვათ შესაბამისად და გელოდებით",
+    status: true,
   },
   {
     id: 2,
     age: "3-დან 4 წლამდე",
     date: "25 დეკ. 2023 13:00 PM",
+    title: "ღონისძიების დასახელება",
     message:
       "ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ ბავშვებს ჩააცვათ შესაბამისად",
+    status: false,
   },
   {
     id: 3,
     age: "0-დან 2 წლამდე",
     date: "25 დეკ. 2023 13:00 PM",
+    title: "ღონისძიების დასახელება",
     message:
       "ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ ბავშვებს ჩააცვათ შესაბამისად",
+    status: false,
   },
   {
     id: 4,
     age: "ყველა ჯგუფი",
     date: "25 დეკ. 2023 13:00 PM",
+    title: "ღონისძიების დასახელება",
     message:
       "ძვირფასო მშობლებო. მოგვივიდა შეტყობინება და ბაღი არ იფუნქციონირებს ოთხშაბათს. გთხოვთ გაითვალისწინოთ და ბავშვები არ მოიყვანოთ. ",
+    status: false,
   },
 ];
 
@@ -75,6 +84,19 @@ const MainContent = () => {
               age={d.age}
               date={d.date}
               message={d.message}
+              title={d.title}
+            />
+          );
+        })}
+        {data.map((d) => {
+          return (
+            <EventComponentParentSide
+              key={d.id}
+              age={d.age}
+              date={d.date}
+              message={d.message}
+              title={d.title}
+              status={d.status}
             />
           );
         })}

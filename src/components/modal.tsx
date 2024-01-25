@@ -1,6 +1,7 @@
 import { useClickAway } from "@uidotdev/usehooks";
 import ModalInputContainer from "./modal.input.container";
 import CustomCheckbox from "./custom.checkbox";
+import CustomDatePicker from "./custom.date.picker";
 
 type PropsType = {
   setModalOpen: (arg: boolean) => void;
@@ -28,11 +29,7 @@ const AddModal = ({ setModalOpen }: PropsType) => {
 
         <ModalInputContainer title="დაწყების დრო">
           <div className="flex justify-between">
-            <input
-              type="date"
-              placeholder="დაწყება"
-              className="w-[324px] h-[54px] border-[1px] border-[#919EAB33] rounded-[8px] py-[16px] px-[14px] text-[#919EAB] focus:outline-none"
-            />
+            <CustomDatePicker />
             <input
               type="date"
               placeholder="დასრულება"
