@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>KidNest</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="py-[21px] px-[32px] h-[81] flex justify-between items-center"
+    >
+      <div class="w-[326px]">
+        <a href="/">
+          <img src="./assets/logo.png" class="w-[130px] h-[40px]" />
+        </a>
+      </div>
+      <div class="w-full">
+        <img src="./assets/ic-eva_search-fill.png" />
+      </div>
+      <nav class="flex gap-[4px] items-center justify-center w-[232px]">
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/Flag_of_Georgia 1.png" class="w-[33px] h-[22px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center relative">
+          <img src="./assets/ic-bell.png" class="size-[24px]" />
+          <div
+            class="absolute -top-[1px] -right-[1px] bg-[#FF5630] size-[20px] rounded-full text-[12px] text-white flex justify-center items-center"
+          >
+            1
+          </div>
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/ic-bell.png" class="size-[24px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/ic-user-group.png" class="size-[24px]" />
+        </button>
+        <button class="size-[40px] flex justify-center items-center">
+          <img src="./assets/avatar.png" class="rounded-full size-[36px]" />
+        </button>
+      </nav>
+    </header>
+    <!-- header -->
+
+    <!-- content -->
+    <div
+      class="flex sm:min-h-[calc(100dvh-82px)] px-[20px] sm:px-[32px] py-[22px] gap-[30px]"
+    >
+      <!-- navigation-->
+      <nav
+        class="w-[248px] text-[#999999] hidden sm:flex flex-col justify-between"
+      >
+        <div>
+          <h4 class="h-[42px] text-[12px] flex items-center select-none">
+            Overview
+          </h4>
+          <div class="text-[14px]">
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon1.png" /> ანალიტიკა
+            </a>
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon2.png" /> ფინანსები
+            </a>
+            <a href="#" class="flex gap-[16px] items-center h-[44px]">
+              <img src="./assets/icon3.png" /> ფაილი
+            </a>
+          </div>
+        </div>
+        <button class="text-[#FF5630] w-[240px] h-[40px] shadow-md rounded-lg">
+          გასვლა
+        </button>
+      </nav>
+      <!-- navigation-->
+
+      <!--main-->
+
+      <main class="w-full flex flex-col gap-[40px]">
+        <div class="flex flex-col gap-[15px] justify-between items-start">
+          <div class="flex items-end gap-[5px]">
+            <h2 class="text-[24px] font-[700] text-[#212B36]">
+              კვების რაციონი
+            </h2>
+            <h3 class="font-[400] text-[14px] text-[#212B36]">
+              ცაგარელის ფილიალი
+            </h3>
+          </div>
+          <div class="w-full flex justify-start">
+            <button
+              class="text-[#919EAB] flex items-center justify-center flex"
+            >
+              <img src="./assets/back.png" class="size-[24px]" />
+              უკან
+            </button>
+          </div>
+          <div class="w-full flex justify-between">
+            <div class="flex items-end gap-[10px]">
+              <h3 class="font-[400] text-[14px] text-[#212B36]">ჯგუფი:</h3>
+              <h2 class="text-[24px] font-[700] text-[#212B36]">
+                ჯგუფის სახელი
+              </h2>
+            </div>
+            <select>
+              <option>თვე</option>
+            </select>
+          </div>
+        </div>
+        <!-- calendar-->
+        <div
+          class="w-full flex flex-col shadow-[0px_12px_24px_-4px_#919EAB1F,0px_0px_2px_0px_#919EAB33] rounded-[16px]"
+        >
+          <div
+            class="font-[600] text-[14px] text-[#212B36] flex w-full h-[48px]"
+          >
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              ორშაბათი
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              სამშაბათი
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              ოთხშაბათი
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              ხუთშაბათ
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              პარასკევი
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              შაბაბათი
+            </div>
+            <div
+              class="w-[calc(14.29%-0.1px)] border-b-[1px] border-[#919EAB33] flex justify-center items-center"
+            >
+              კვირა
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap [&>*:nth-child(7n)]:border-r-0 [&>*:nth-last-child(-n+7)]:border-b-0 text-[14px] font-[400]"
+          >
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              26
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              27
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              28
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              29
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              30
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              31
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              1
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              2
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              3
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              4
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              5
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              6
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              7
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              8
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              9
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              10
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              11
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              12
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              13
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              14
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              15
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              16
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              17
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              18
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              19
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              20
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              21
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              22
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              23
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              24
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              25
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              26
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              27
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              28
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              29
+            </div>
+            <!-- აქტირუი თვის თარიღის ფერით -->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#212B36]"
+            >
+              30
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              1
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              2
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              3
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              4
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              5
+            </div>
+            <!-- გასული თვის თარიღის ფერით-->
+            <div
+              class="w-[calc(14.29%-0.1px)] aspect-[1.28575] border-r-[1px] border-b-[1px] border-[#919EAB33] p-[8px] text-right text-[#919EAB]"
+            >
+              6
+            </div>
+          </div>
+        </div>
+        <!-- calendar-->
+      </main>
+
+      <!--main-->
+    </div>
+    <!-- content -->
+  </body>
+</html>
