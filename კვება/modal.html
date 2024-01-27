@@ -34,12 +34,64 @@
             <button class="absolute top-1/2 -translate-y-1/2 right-[10px]">
               <img src="./assets/select arrow.svg" />
             </button>
+
+            <!-- დროფ დაუნს მხოლოდ hidden მოაშორე პირველივე div ს და გამოჩნდება დროფ დაუნი-->
             <!-- drop down -->
             <div
-              class="w-[280px] p-[4px] bg-white shadow-[-20px_20px_40px_-4px_#919EAB3D,0px_0px_2px_0px_#919EAB3D] roudned-[8px]"
+              class="w-[280px] p-[4px] bg-white shadow-[-20px_20px_40px_-4px_#919EAB3D,0px_0px_2px_0px_#919EAB3D] rounded-[8px] absolute top-[45px] left-[5px] flex flex-col hidden"
             >
-              <div class="px-[8px] py-[6px] w-full"></div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#161C24]/80 rounded-full flex justify-center items-center"
+                >
+                  <img
+                    src="./assets/ic-eva_checkmark-fill.svg"
+                    class="size-[20px]"
+                  />
+                </div>
+                <span
+                  class="text-[#006C9C] text-[14px] font-[400] leading-[22px]"
+                  >საუზმე</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#C2EADC] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#1AA67A] text-[14px] font-[400] leading-[22px]"
+                  >ხემსი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#FFEBC2] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#7A4100] text-[14px] font-[400] leading-[22px]"
+                  >სადილი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#FFD6CD] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#FF6B6B] text-[14px] font-[400] leading-[22px]"
+                  >ვახშამი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#1949733D] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#194973] text-[14px] font-[400] leading-[22px]"
+                  >მეორე ხემსი</span
+                >
+              </div>
             </div>
+            <!-- drop down -->
           </label>
           <label>
             <textarea
