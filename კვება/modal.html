@@ -5,27 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>KidNest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body style="font-family: 'Noto Sans Georgian', sans-serif">
     <div
       class="bg-[#444444]/50 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 p-[24px]"
     >
-      <div class="bg-white w-[480px] h-fit rounded-[16px] flex flex-col">
-        <h1 class="text-[18px] font-[700] text-[#212B36] p-[24px]">კვება</h1>
+      <div
+        class="bg-white w-full sm:w-[480px] h-fit rounded-[16px] flex flex-col"
+      >
+        <h1
+          class="text-[18px] font-[700] text-[#212B36] p-[24px] leading-[28px]"
+        >
+          კვება
+        </h1>
         <div class="px-[24px] pb-[24px] flex flex-col gap-[24px]">
           <label class="relative">
-            <select
+            <input
               type="text"
-              class="appearance-none border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] text-[#919EAB] focus:outline-none"
+              class="appearance-none border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] placeholder:text-[#919EAB] focus:outline-none"
               placeholder="რომელი კვებაა"
+            />
+            <button class="absolute top-1/2 -translate-y-1/2 right-[10px]">
+              <img src="./assets/select arrow.svg" />
+            </button>
+            <!-- drop down -->
+            <div
+              class="w-[280px] p-[4px] bg-white shadow-[-20px_20px_40px_-4px_#919EAB3D,0px_0px_2px_0px_#919EAB3D] roudned-[8px]"
             >
-              <option>რომელი კვებაა</option>
-              <option>2</option>
-            </select>
+              <div class="px-[8px] py-[6px] w-full"></div>
+            </div>
           </label>
           <label>
             <textarea
-              class="border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] text-[#919EAB] resize-none focus:outline-none"
+              class="border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] placeholder:text-[#919EAB] resize-none focus:outline-none"
               placeholder="აქ აღწერეთ თითოეული კვება"
             ></textarea>
           </label>
@@ -40,12 +58,13 @@
               </legend>
               <input
                 placeholder="300"
-                class="text-[14px] text-[#919EAB] px-[14px] py-[16px] font-[400] w-full focus:outline-none"
+                class="text-[14px] placeholder:text-[#919EAB] px-[14px] py-[16px] font-[400] w-full focus:outline-none"
               />
             </fieldset>
           </label>
           <div class="flex flex-col gap-[8px]">
-            <span class="text-[#212B36] text-[14px] font-[600] select-none"
+            <span
+              class="text-[#212B36] text-[14px] font-[600] select-none leading-[22px]"
               >ჯგუფები</span
             >
             <div class="flex flex-col gap-[5px]">

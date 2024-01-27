@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>KidNest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <!-- header -->
+  <body style="font-family: 'Noto Sans Georgian', sans-serif">
+    <!-- header Desktop -->
     <header
-      class="py-[21px] px-[32px] h-[81] flex justify-between items-center"
+      class="py-[21px] px-[32px] h-[81] hidden sm:flex justify-between items-center gap-[10px]"
     >
       <div class="w-[326px]">
         <a href="/">
@@ -42,7 +48,17 @@
         </button>
       </nav>
     </header>
-    <!-- header -->
+    <!-- header Desktop -->
+
+    <!-- header Mobile -->
+    <header
+      class="w-full bg-white flex justify-between items-center sm:hidden p-[15px]"
+    >
+      <img src="./assets/ic-menu-item.png" />
+      <img src="./assets/logo.png" />
+      <img src="./assets/Flag_of_Georgia 1.png" />
+    </header>
+    <!-- header Mobile -->
 
     <!-- content -->
     <div
@@ -50,7 +66,7 @@
     >
       <!-- navigation-->
       <nav
-        class="w-[248px] text-[#999999] hidden sm:flex flex-col justify-between"
+        class="w-[248px] text-[#999999] hidden lg:flex flex-col justify-between"
       >
         <div>
           <h4 class="h-[42px] text-[12px] flex items-center select-none">
@@ -78,16 +94,19 @@
 
       <main class="w-full flex flex-col gap-[40px]">
         <div class="flex flex-col gap-[15px] justify-between items-start">
-          <h2 class="text-[24px] font-[700] text-[#212B36]">ღონისძიებები</h2>
+          <h2 class="text-[24px] font-[700] text-[#212B36] leading-[36px]">
+            ღონისძიებები
+          </h2>
           <div class="w-full flex justify-between sm:justify-end">
             <button
-              class="text-[#919EAB] flex items-center justify-center flex sm:hidden"
+              class="text-[#919EAB] text-[12px] font-[400] leading-[18px] flex items-center justify-center flex sm:hidden"
             >
               <img src="./assets/back.png" class="size-[24px]" />
               უკან
             </button>
+
             <button
-              class="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px]"
+              class="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px] leading-[24px]"
             >
               <img src="./assets/add.png" class="size-[20px]" />
               ღონისძიების დამატება
@@ -102,13 +121,17 @@
             <div class="flex flex-col gap-[16px]">
               <div class="flex justify-between text-[12px]">
                 <span
-                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
                 >
                   1-დან 2 წლამდე
                 </span>
-                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+                <p class="text-[#919EAB] font-[400] leading-[18px]">
+                  25 დეკ. 2023 13:00 PM
+                </p>
               </div>
-              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <h2 class="text-[18px] font-[700] leading-[22px]">
+                ღონისძიების დასახელება
+              </h2>
               <p class="text-[14px] text-[#919EAB] font-[600]">
                 ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
                 ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
@@ -123,13 +146,17 @@
             <div class="flex flex-col gap-[16px]">
               <div class="flex justify-between text-[12px]">
                 <span
-                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
                 >
                   1-დან 2 წლამდე
                 </span>
-                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+                <p class="text-[#919EAB] font-[400] leading-[18px]">
+                  25 დეკ. 2023 13:00 PM
+                </p>
               </div>
-              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <h2 class="text-[18px] font-[700] leading-[22px]">
+                ღონისძიების დასახელება
+              </h2>
               <p class="text-[14px] text-[#919EAB] font-[600]">
                 ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
                 ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
@@ -144,13 +171,17 @@
             <div class="flex flex-col gap-[16px]">
               <div class="flex justify-between text-[12px]">
                 <span
-                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
                 >
                   1-დან 2 წლამდე
                 </span>
-                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+                <p class="text-[#919EAB] font-[400] leading-[18px]">
+                  25 დეკ. 2023 13:00 PM
+                </p>
               </div>
-              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <h2 class="text-[18px] font-[700] leading-[22px]">
+                ღონისძიების დასახელება
+              </h2>
               <p class="text-[14px] text-[#919EAB] font-[600]">
                 ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
                 ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
@@ -165,13 +196,17 @@
             <div class="flex flex-col gap-[16px]">
               <div class="flex justify-between text-[12px]">
                 <span
-                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px]"
+                  class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
                 >
                   1-დან 2 წლამდე
                 </span>
-                <p class="text-[#919EAB] font-[400]">25 დეკ. 2023 13:00 PM</p>
+                <p class="text-[#919EAB] font-[400] leading-[18px]">
+                  25 დეკ. 2023 13:00 PM
+                </p>
               </div>
-              <h2 class="text-[18px] font-[700]">ღონისძიების დასახელება</h2>
+              <h2 class="text-[18px] font-[700] leading-[22px]">
+                ღონისძიების დასახელება
+              </h2>
               <p class="text-[14px] text-[#919EAB] font-[600]">
                 ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
                 ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
