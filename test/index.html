@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KidNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./app.scss" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header
+        class="top-0 w-full flex items-center py-[15px] px-3 md:px-14 justify-start justify-between"
+      >
+        <button class="block md:hidden" id="burger">
+          <img
+            src="{{asset('assets/images/global/burger.png')}}"
+            alt="KidNest"
+          />
+        </button>
+
+        <a class="flex items-center space-x-2" href="/">
+          <img src="{{asset('assets/images/global/logo.svg')}}" alt="KidNest" />
+        </a>
+        <div class="flex items-center">
+          <button class="block sm:hidden"></button>
+
+          <div class="flex hidden sm:block">
+            <form method="POST" action="{{route('logout')}}">
+              <button
+                class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+              ></button>
+            </form>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script src="{{ asset('js/flowbite.min.js') }}"></script>
+  </body>
+</html>
