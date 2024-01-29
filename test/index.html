@@ -9,192 +9,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>KidNest</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./public/css/app.css" />
-    <link rel="stylesheet" href="./public/css/fonts.css" />
-    <link rel="stylesheet" href="./public/css/chatify/dark.mode.css" />
-    <link rel="stylesheet" href="./public/css/chatify/light.mode.css" />
-    <link rel="stylesheet" href="./public/css/chatify/style.css" />
-    <link rel="stylesheet" href="./public/css/filament/filament/app.css" />
-    <link rel="stylesheet" href="./public/css/filament/forms/forms.css" />
-    <link rel="stylesheet" href="./public/css/filament/support/support.css" />
-    <link rel="stylesheet" href="./public/css/file-manager/app.min.css" />
-    <link rel="stylesheet" href="./public/css/file-manager/bootstrap.min.css" />
-    <link rel="stylesheet" href="./public/css/file-manager/custom.min.css" />
-    <link rel="stylesheet" href="./public/css/file-manager/icons.min.css" />
   </head>
-  <body>
-    <div class="app-container">
-      <header
-        class="top-0 w-full flex items-center py-[15px] px-3 md:px-14 justify-start justify-between bg-green-200"
+  <body class="h-screen flex justify-center items-center">
+    <div>
+    <form class="p-[20px] bg-neutral-300">
+      <fieldset
+        x-data="{ showPassword: false }"
+        class="relative rounded-lg border-[1px] border-[#ECECEC] has-[:focus]:ring-0 has-[:focus]:border-blue-600"
       >
-        <button class="block md:hidden" id="burger">
-          <img src="./public/assets/images/global/burger.png" alt="KidNest" />
-        </button>
-
-        <a class="flex items-center space-x-2" href="/">
-          <img src="./public/assets/images/global/logo.svg" alt="KidNest" />
-        </a>
-        <div class="flex items-center">
-          <!-- language-->
-
-          <button
-            id="lngDrop"
-            data-dropdown-toggle="languageDropDown"
-            class="text-white mr-[22px] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center inline-flex items-center"
-            type="button"
-          >
-            <img src="./public/assets/images/flag/ka.svg" />
-          </button>
-          <!-- language-->
-          <button class="block sm:hidden"></button>
-
-          <div class="flex hidden sm:block">
-            <form method="POST" action="{{route('logout')}}">
-              <button
-                class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              >
-                logout
-              </button>
-            </form>
-          </div>
-        </div>
-      </header>
-      <div class="flex">
-        <aside
-          id="sidebar"
-          class="hidden sm:block sm:w-64 h-screen bg-blue-300"
-          aria-label="Sidebar"
+        <legend class="px-[10px] mx-[10px] font-normal bg-transparent text-[14px] md:text-[16px] text-gray-500 dark:text-gray-400">{{ $placeholder }}</legend>
+        <input x-bind:type="{{ $xbindType }}" id="{{ $name }}" placeholder="{{
+        $place }}" name="{{ $name }}" value="{{ $value }}" {{ $disabled ?
+        'disabled' : '' }} {{ $required ? 'required' : '' }} class="block
+        py-[17.5px] px-[15px] md:py-[19px] md:px-[20px] w-full text-sm
+        text-gray-900 bg-transparent appearance-none focus:outline-none
+        focus:ring-0 focus:border-blue-600 peer placeholder:text-[#000] peer" />
+        @if ($icon)
+        <div
+          class="absolute right-[15px] md:right-[20px] top-[15px] md:top-[20px]"
         >
-          navbar
-        </aside>
-
-        <main class="w-full flex flex-col gap-[40px] bg-red-200">
-          <div class="flex flex-col gap-[15px] justify-between items-start">
-            <h2 class="text-[24px] font-[700] text-[#212B36] leading-[36px]">
-              ღონისძიებები
-            </h2>
-            <div class="w-full flex justify-between sm:justify-end">
-              <button
-                class="text-[#919EAB] text-[12px] font-[400] leading-[18px] flex items-center justify-center flex sm:hidden"
-              >
-                <img src="./assets/back.png" class="size-[24px]" />
-                უკან
-              </button>
-
-              <button
-                class="px-[12px] py-[6px] bg-[#212B36] rounded-[8px] flex justify-center items-center gap-[8px] text-white text-[14px] leading-[24px]"
-              >
-                <img src="./assets/add.png" class="size-[20px]" />
-                ღონისძიების დამატება
-              </button>
-            </div>
-          </div>
-          <section class="w-full flex flex-wrap gap-[25px]">
-            <!-- post -->
-            <article
-              class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
-            >
-              <div class="flex flex-col gap-[16px]">
-                <div class="flex justify-between text-[12px]">
-                  <span
-                    class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
-                  >
-                    1-დან 2 წლამდე
-                  </span>
-                  <p class="text-[#919EAB] font-[400] leading-[18px]">
-                    25 დეკ. 2023 13:00 PM
-                  </p>
-                </div>
-                <h2 class="text-[18px] font-[700] leading-[22px]">
-                  ღონისძიების დასახელება
-                </h2>
-                <p class="text-[14px] text-[#919EAB] font-[600]">
-                  ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
-                  ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
-                </p>
-              </div>
-            </article>
-            <!-- post -->
-            <!-- post -->
-            <article
-              class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
-            >
-              <div class="flex flex-col gap-[16px]">
-                <div class="flex justify-between text-[12px]">
-                  <span
-                    class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
-                  >
-                    1-დან 2 წლამდე
-                  </span>
-                  <p class="text-[#919EAB] font-[400] leading-[18px]">
-                    25 დეკ. 2023 13:00 PM
-                  </p>
-                </div>
-                <h2 class="text-[18px] font-[700] leading-[22px]">
-                  ღონისძიების დასახელება
-                </h2>
-                <p class="text-[14px] text-[#919EAB] font-[600]">
-                  ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
-                  ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
-                </p>
-              </div>
-            </article>
-            <!-- post -->
-            <!-- post -->
-            <article
-              class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
-            >
-              <div class="flex flex-col gap-[16px]">
-                <div class="flex justify-between text-[12px]">
-                  <span
-                    class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
-                  >
-                    1-დან 2 წლამდე
-                  </span>
-                  <p class="text-[#919EAB] font-[400] leading-[18px]">
-                    25 დეკ. 2023 13:00 PM
-                  </p>
-                </div>
-                <h2 class="text-[18px] font-[700] leading-[22px]">
-                  ღონისძიების დასახელება
-                </h2>
-                <p class="text-[14px] text-[#919EAB] font-[600]">
-                  ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
-                  ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
-                </p>
-              </div>
-            </article>
-            <!-- post -->
-            <!-- post -->
-            <article
-              class="w-full lg:odd:w-[calc(50%-25px)] lg:even:w-[calc(50%)] bg-white shadow-[0_12px_24px_-4px] shadow-[#919EAB1F] flex p-[24px]"
-            >
-              <div class="flex flex-col gap-[16px]">
-                <div class="flex justify-between text-[12px]">
-                  <span
-                    class="bg-[#22C55E29] text-[#118D57] font-[700] px-[6px] py-[2px] rounded-[6px] leading-[20px]"
-                  >
-                    1-დან 2 წლამდე
-                  </span>
-                  <p class="text-[#919EAB] font-[400] leading-[18px]">
-                    25 დეკ. 2023 13:00 PM
-                  </p>
-                </div>
-                <h2 class="text-[18px] font-[700] leading-[22px]">
-                  ღონისძიების დასახელება
-                </h2>
-                <p class="text-[14px] text-[#919EAB] font-[600]">
-                  ძვირფასო მშობლებო. პარასკევს გვექნება საახალწლო ზეიმი. გთხოვთ
-                  ბავშვებს ჩააცვათ შესაბამისად და გელოდებით
-                </p>
-              </div>
-            </article>
-            <!-- post -->
-          </section>
-        </main>
-      </div>
-    </div>
-
-    <script src="./public/js/flowbite.min.js"></script>
+          <img src="{{ asset($icon) }}" alt="icon" class="w-[20px] h-[20px]" />
+        </div>
+        @endif @if ($passwordToggle)
+        <div
+          @click="showPassword = !showPassword"
+          class="cursor-pointer absolute right-[15px] md:right-[20px] top-[15px] md:top-[20px]"
+        >
+          <img
+            x-bind:src="showPassword ? '{{ asset('assets/images/user/eye-closed.svg') }}' : '{{ asset('assets/images/user/eye.svg') }}'"
+            alt="icon"
+            class="w-[20px] h-[20px]"
+          />
+        </div>
+        @endif
+      </fieldset>
+     </div>
+    </form>
   </body>
 </html>
