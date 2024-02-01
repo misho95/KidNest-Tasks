@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>KidNest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="font-family: 'Noto Sans Georgian', sans-serif">
+    <div
+      class="bg-[#444444]/50 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 p-[24px]"
+    >
+      <div
+        class="bg-white w-full sm:w-[480px] h-fit rounded-[16px] flex flex-col"
+      >
+        <h1
+          class="text-[18px] font-[700] text-[#212B36] p-[24px] leading-[28px]"
+        >
+          კვება
+        </h1>
+        <div class="px-[24px] pb-[24px] flex flex-col gap-[24px]">
+          <label class="relative">
+            <input
+              type="text"
+              class="appearance-none border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] placeholder:text-[#919EAB] focus:outline-none"
+              placeholder="რომელი კვებაა"
+            />
+            <button class="absolute top-1/2 -translate-y-1/2 right-[10px]">
+              <img src="./assets/select arrow.svg" />
+            </button>
+
+            <!-- დროფ დაუნს მხოლოდ hidden მოაშორე პირველივე div ს და გამოჩნდება დროფ დაუნი-->
+            <!-- drop down -->
+            <div
+              class="w-[280px] p-[4px] bg-white shadow-[-20px_20px_40px_-4px_#919EAB3D,0px_0px_2px_0px_#919EAB3D] rounded-[8px] absolute top-[45px] left-[5px] flex flex-col hidden"
+            >
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#161C24]/80 rounded-full flex justify-center items-center"
+                >
+                  <img
+                    src="./assets/ic-eva_checkmark-fill.svg"
+                    class="size-[20px]"
+                  />
+                </div>
+                <span
+                  class="text-[#006C9C] text-[14px] font-[400] leading-[22px]"
+                  >საუზმე</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#C2EADC] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#1AA67A] text-[14px] font-[400] leading-[22px]"
+                  >ხემსი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#FFEBC2] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#7A4100] text-[14px] font-[400] leading-[22px]"
+                  >სადილი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#FFD6CD] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#FF6B6B] text-[14px] font-[400] leading-[22px]"
+                  >ვახშამი</span
+                >
+              </div>
+              <div class="px-[8px] py-[6px] w-full flex items-center gap-[4px]">
+                <div
+                  class="size-[32px] bg-[#1949733D] rounded-full flex justify-center items-center"
+                ></div>
+                <span
+                  class="text-[#194973] text-[14px] font-[400] leading-[22px]"
+                  >მეორე ხემსი</span
+                >
+              </div>
+            </div>
+            <!-- drop down -->
+          </label>
+          <label>
+            <textarea
+              class="border-[1px] border-[#919EAB33] rounded-[8px] px-[14px] py-[16px] w-full font-[400] text-[14px] placeholder:text-[#919EAB] resize-none focus:outline-none"
+              placeholder="აქ აღწერეთ თითოეული კვება"
+            ></textarea>
+          </label>
+          <label>
+            <fieldset
+              class="border-[1px] border-[#919EAB33] rounded-[8px] w-full"
+            >
+              <legend
+                class="mx-[20px] px-[5px] text-[12px] text-[#637381] font-[600] select-none"
+              >
+                კალორია
+              </legend>
+              <input
+                placeholder="300"
+                class="text-[14px] placeholder:text-[#919EAB] px-[14px] py-[16px] font-[400] w-full focus:outline-none"
+              />
+            </fieldset>
+          </label>
+          <div class="flex flex-col gap-[8px]">
+            <span
+              class="text-[#212B36] text-[14px] font-[600] select-none leading-[22px]"
+              >ჯგუფები</span
+            >
+            <div class="flex flex-col gap-[5px]">
+              <!-- Customcheckbox -->
+              <label>
+                <input
+                  type="checkbox"
+                  checked
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >0-დან 2 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+              <!-- Customcheckbox -->
+              <label class="flex gap-[5px] items-center w-fit cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >1-დან 2 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+              <!-- Customcheckbox -->
+              <label class="flex gap-[5px] items-center w-fit cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >2-დან 3 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+              <!-- Customcheckbox -->
+              <label class="flex gap-[5px] items-center w-fit cursor-pointer">
+                <input
+                  type="checkbox"
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >3-დან 4 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+              <!-- Customcheckbox -->
+              <label class="flex gap-[5px] items-center w-fit cursor-pointer">
+                <input
+                  type="checkbox"
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >4-დან 5 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+              <!-- Customcheckbox -->
+              <label class="flex gap-[5px] items-center w-fit cursor-pointer">
+                <input
+                  type="checkbox"
+                  class="appearance-none size-[18px] relative after:content-[url(./assets/unchecked.svg)] checked:after:content-[url(./assets/checkbox.svg)] after:absolute after:size-[18px] after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2"
+                />
+                <span class="text-[14px] font-[400] text-[#212B36]"
+                  >5-დან 6 წლამდე (ჯგუფი1)</span
+                >
+              </label>
+              <!-- Customcheckbox -->
+            </div>
+          </div>
+        </div>
+        <div class="p-[24px] flex justify-end gap-[12px]">
+          <button
+            class="font-[700] text-[14px] text-[#212B36] border-[1px] border-[#919EAB3D] px-[12px] py-[6px] rounded-[8px] bg-white"
+          >
+            გაუქმება
+          </button>
+          <button
+            class="font-[700] text-[14px] text-[#FFFFFF] px-[12px] py-[6px] rounded-[8px] bg-[#FFCC5C]"
+          >
+            შენახვა
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
